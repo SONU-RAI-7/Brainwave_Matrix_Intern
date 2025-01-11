@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="heading">To-Do List</h1>
+            <button id="themeToggle" class="theme-switch">
+                <span class="theme-icon"></span>
+            </button>
+        </div>
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Enter a new task...">
+            <input type="date" id="taskDeadline" placeholder="Deadline">
+            <select id="taskStatus">
+                <option value="pending">Pending</option>
+                <option value="in-progress">In Progress</option>
+                <option value="completed">Completed</option>
+            </select>
+            <button id="addTaskButton">Add Task</button>
+        </div>
+        <div class="task-info">
+            <p><span id="totalTasksLabel" class="label">Total Tasks:</span> <span id="totalTasks">0</span></p>
+            <p><span id="completedTasksLabel" class="label">Completed:</span> <span id="completedTasks">0</span></p>
+        </div>
+        <div class="task-controls">
+            <label for="sortSelect">Sort by:</label>
+            <select id="sortSelect">
+                <option value="az">A-Z</option>
+                <option value="za">Z-A</option>
+                <option value="deadline-asc">Deadline (Earliest first)</option>
+                <option value="deadline-desc">Deadline (Latest first)</option>
+                <option value="status">Status</option>
+            </select>
+
+            <label for="filterSelect">Filter by Status:</label>
+            <select id="filterSelect">
+                <option value="all">All</option>
+                <option value="pending">Pending</option>
+                <option value="in-progress">In Progress</option>
+                <option value="completed">Completed</option>
+            </select>
+        </div>
+
+        <ul id="taskList" class="task-list"></ul>
+        <button id="clearAllButton">Clear All</button>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
